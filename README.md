@@ -1,5 +1,7 @@
 # Net Range Tool
 
+[![Go Reference](https://pkg.go.dev/badge/github.com/jrmanes/go-cidr.svg)](https://pkg.go.dev/github.com/jrmanes/go-cidr)
+
 ---
 
 ## Description
