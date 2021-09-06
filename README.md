@@ -45,21 +45,27 @@ import (
 	"time"
 	"log"
 
+	b "github.com/jrmanes/go-cidr/cmd/bootstrap"
+	m "github.com/jrmanes/go-cidr/pkg/store/in_memory"
 )
 
 func main() {
-    now := time.Now()
-    log.Println("---------FROM MEMORY------------")
-    ip2CheckInMemory := "10.251.0.162"
-    existsInMemory := in_memory.CheckIfIpExistsInMemory(ip2CheckInMemory)
-    if existsInMemory {
-        log.Println("IP found ip2CheckInMemory (", ip2CheckInMemory, ")", existsInMemory)
-    } else {
-        log.Println("IP NOT found ip2CheckInMemory (", ip2CheckInMemory, ")", existsInMemory)
-    }
-    log.Println("elapse using storage memory:", time.Since(now))
-    log.Println("-----------------------------")
+	// load configuration
+	b.Run()
+
+	now := time.Now()
+	log.Println("---------FROM MEMORY------------")
+	ip2CheckInMemory := "10.251.0.162"
+	existsInMemory := m.CheckIfIpExistsInMemory(ip2CheckInMemory)
+	if existsInMemory {
+		log.Println("IP found ip2CheckInMemory (", ip2CheckInMemory, ")", existsInMemory)
+	} else {
+		log.Println("IP NOT found ip2CheckInMemory (", ip2CheckInMemory, ")", existsInMemory)
+	}
+	log.Println("elapse using storage memory:", time.Since(now))
+	log.Println("-----------------------------")
 }
+
 
 ```
 
