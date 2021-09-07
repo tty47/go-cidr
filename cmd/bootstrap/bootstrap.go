@@ -7,9 +7,9 @@ import (
 )
 
 // Run function which starts everything
-func Run() error {
+func Run(configFile string) error {
 	// load configuration and return an error if there is any issue
-	err := config.LoadConfiguration()
+	err := config.LoadConfiguration(configFile)
 	if err != nil {
 		log.Println("[ERROR] ", err.Error())
 		return err

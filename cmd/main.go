@@ -8,7 +8,9 @@ import (
 
 // main entrypoint for our application
 func main() {
-	if err := b.Run(); err != nil {
+	configFile := "./config/config.yml"
+
+	if err := b.Run(configFile); err != nil {
 		log.Fatal(err)
 	}
 }

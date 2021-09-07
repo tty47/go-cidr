@@ -52,9 +52,9 @@ func NewExclussions() Exclusions {
 	return Exclusions{}
 }
 
-func LoadConfiguration() error {
+func LoadConfiguration(configFile string) error {
 	// load the config file and check if there is any error
-	cfg, err := NewConfig("./config/config.yml")
+	cfg, err := NewConfig(configFile)
 	//allIPS := strings.Split(d,"/")
 	if err != nil {
 		fmt.Println("load config fail: ", err)
