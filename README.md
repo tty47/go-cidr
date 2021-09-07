@@ -52,11 +52,12 @@ import (
 
 func main() {
 	// load configuration
-	b.Run()
+	configFile := "./config/config.yml"
+	b.Run(configFile)
 
 	now := time.Now()
 	log.Println("---------FROM MEMORY------------")
-	ip2CheckInMemory := "10.251.0.162"
+	ip2CheckInMemory := "12.251.0.162"
 	existsInMemory := m.CheckIfIpExistsInMemory(ip2CheckInMemory)
 	if existsInMemory {
 		log.Println("IP found ip2CheckInMemory (", ip2CheckInMemory, ")", existsInMemory)
@@ -66,8 +67,6 @@ func main() {
 	log.Println("elapse using storage memory:", time.Since(now))
 	log.Println("-----------------------------")
 }
-
-
 ```
 
 ----
