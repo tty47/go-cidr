@@ -1,4 +1,4 @@
-package in_memory
+package memory
 
 // Create a var in order to add all ips from config
 var ipsToCheck []string

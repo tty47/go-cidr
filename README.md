@@ -29,8 +29,8 @@ The project structure explained what contains what.
 │   │   ├── ip.go // logic to create the hosts from cirds
 │   │   └── ip_test.go // test file for ip pkg
 │   └── store
-│       └── in_memory
-│           └── in_memory.go // storage in memory
+│       └── memory
+│           └── memory.go // storage in memory
 └── README.md // Readme
 ```
 
@@ -47,7 +47,7 @@ import (
 	"log"
 
 	b "github.com/jrmanes/go-cidr/cmd/bootstrap"
-	m "github.com/jrmanes/go-cidr/pkg/store/in_memory"
+	m "github.com/jrmanes/go-cidr/pkg/store/memory"
 )
 
 func main() {

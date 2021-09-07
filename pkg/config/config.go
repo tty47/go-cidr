@@ -7,7 +7,7 @@ import (
 	"strings"
 
 	"github.com/jrmanes/go-cidr/pkg/ip"
-	"github.com/jrmanes/go-cidr/pkg/store/in_memory"
+	"github.com/jrmanes/go-cidr/pkg/store/memory"
 
 	"gopkg.in/yaml.v2"
 )
@@ -100,5 +100,5 @@ func LoadConfiguration(configFile string) error {
 
 // storeData will store our data in a different paths
 func storeData(ipToStore []string) {
-	in_memory.StoreIps(ipToStore)
+	memory.StoreIps(ipToStore)
 }
