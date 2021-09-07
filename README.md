@@ -1,6 +1,7 @@
 # Go-CIDR
 
 [![Go Reference](https://pkg.go.dev/badge/github.com/jrmanes/go-cidr.svg)](https://pkg.go.dev/github.com/jrmanes/go-cidr)
+[![Go Report Card](https://goreportcard.com/badge/github.com/jrmanes/go-cidr)](https://goreportcard.com/report/github.com/jrmanes/go-cidr)
 
 ---
 
