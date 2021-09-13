@@ -7,7 +7,7 @@
 
 ## Description
 
-The purpose of that library is check an IP inside from a CIDR.
+The purpose of that library is checked an IP inside from a CIDR.
 
 ---
 
@@ -20,8 +20,6 @@ The project structure explained what contains what.
 │   ├── bootstrap
 │   │   └── bootstrap.go // point where init the service
 │   └── main.go // entrypoint of the service
-├── config
-│   └── config.yml // example config file
 ├── pkg
 │   ├── config
 │   │   └── config.go // config structs, methods and functions
@@ -52,8 +50,10 @@ import (
 
 func main() {
 	// load configuration
-	configFile := "./config/config.yml"
-	b.Run(configFile)
+	cidr := []string{"10.251.0.0/16", "172.18.0.0/16", "192.168.0.0/16"}
+
+	// Run the process in order to load the hosts inside the cidr
+	b.Run(cidr)
 
 	now := time.Now()
 	log.Println("---------FROM MEMORY------------")

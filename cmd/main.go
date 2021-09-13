@@ -8,9 +8,10 @@ import (
 
 // main entrypoint for our application
 func main() {
-	configFile := "./config/config.yml"
+	// cidr to test the service
+	cidr := []string{"10.251.0.0/16", "172.18.0.0/16", "192.168.0.0/16"}
 
-	if err := b.Run(configFile); err != nil {
+	if err := b.Run(cidr); err != nil {
 		log.Fatal(err)
 	}
 }

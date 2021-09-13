@@ -7,9 +7,9 @@ import (
 )
 
 // Run function which starts everything
-func Run(configFile string) error {
+func Run(cidr []string) error {
 	// load configuration and return an error if there is any issue
-	err := config.LoadConfiguration(configFile)
+	err := config.LoadConfiguration(cidr)
 	if err != nil {
 		log.Println("[ERROR] ", err.Error())
 		return err
