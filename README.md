@@ -71,6 +71,14 @@ func main() {
 
 ----
 
+## TODO
+
+- [ ] Change project structure
+  - [ ] Release 2.0.0
+- [ ] Add more test
+
+----
+
 Jose Ramón Mañes
 
 ---
